@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns:th="https://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+    <head>
+        <title>Cadastrar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <form action="/salvarEstado" th:object="${estado}" method="POST">
+        
+        	<label>Nome do Estado</label>
+        	<input type="text" th:field="*{nome}"/>
+        	
+    	    <label>Sigla do Estado</label>
+        	<input type="text" th:field="*{sigla}"/>
+        	
+        	<input type="hidden" th:field="*{id}"/>
+        	
+        	<button type="submit">Salvar</button>
+        
+        </form>
+    </body>
+    
+</html>
